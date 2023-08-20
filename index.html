@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="./images/ic-logo.svg" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
@@ -11,14 +12,27 @@
 </head>
 
 <body>
+    <input type="checkbox" id="check">
     <div class="sidebar">
-        <a href="/" class="ic ic-logo"></a>
-        <a href="#" class="ic ic-profile"></a>
-        <a href="#" class="ic ic-cloud_download"></a>
-        <a href="#" class="ic ic-settings"></a>
+        <a href="/" class="ic ic-logo">
+            <div class="logo_title">
+                <p class="logo_title__head">DIZZILION</p>
+                <p class="logo_title__bottom">try your best</p>
+            </div>
+        </a>
+        <a href="#" class="ic ic-profile"><p>Profile</p></a>
+        <a href="#" class="ic ic-cloud_download"><p>Download files</p></a>
+        <a href="#" class="ic ic-settings"><p>Setting</p></a>
+        <label for="check">
+            <i class="sidebar__btn"><</i>
+        </label>
     </div>
+    <label class="burger_menu" for="check">
+        <i class="ic ic-menu_bars"></i>
+    </label>
 
 
+    
 </body>
 
 </html>

@@ -2,38 +2,125 @@
    width: 86px
    height: 100vh
    padding: 10px 10px
+   transition: margin-left 0.3s ease-in-out
    display: flex
    flex-direction: column
    align-items: center
    border-radius: 0 20px 20px 0
    background-color: $background_white
+   position: relative
+   &__btn
+      color: white
+      font-weight: 700
+      +flex_center
+      display: none
+      width: 20px
+      height: 50px
+      border-radius: 8px
+      background-color: $background_blue
+      position: absolute
+      right: 10px
+      top: calc(50vh - 25px)
+      border: none
+      +smartphone
+         display: flex
+      &:hover
+         background-color: $background_black
+   +smartphone
+      margin-left: -260px
+      width: 260px
+      align-items: baseline
 
 .ic
    width: 40px
    height: 40px
-   display: block
+   display: flex
+   align-items: center
    margin-top: 20px
+   text-decoration: none
+   p
+      +text_normal
+      display: none
+      margin-left: 50px
+      white-space: nowrap
+      color: $text_grey
+      +smartphone
+         display: inline-block
    
-@each $icon in logo, profile, cloud_download, settings
+@each $icon in logo, profile, cloud_download, settings, menu_bars
    .ic-#{$icon}
       background: url(../images/ic-#{$icon}.svg) center no-repeat
 
 .ic-logo
    position: relative
    margin-bottom: 30px
+   p
+      font-weight: 700
+      font-size: 30px
 
 .ic-logo::after
-    content: ''
-    width: 70px
-    height: 1px
-    display: block
-    background: $background_black
-    opacity: 0.2
-    position: absolute
-    bottom: -25px
-    left: -15px
-    pointer-events: none
+   content: ''
+   width: 70px
+   height: 1px
+   display: block
+   background: $background_black
+   opacity: 0.2
+   position: absolute
+   bottom: -25px
+   left: -15px
+   pointer-events: none
+   +smartphone
+      left: 0px
+      width: 240px
+
+.logo_title 
+   p
+      line-height: 1 
+   &__head 
+      letter-spacing: 5px
+      font-size: 24px !important
+   &__bottom
+      font-size: 12px !important
+      word-spacing: 3px
+
+.ic-profile
+   p
+      opacity: $opacity_100
+
+.ic-cloud_download
+   opacity: 0.2
+   +hover_full_opacity
 
 .ic-settings
    margin-top: auto
    margin-bottom: 10px
+   opacity: 0.2
+   +hover_full_opacity
+
+#check 
+   display: none
+
+.burger_menu
+   display: none
+   cursor: pointer
+   +smartphone
+      display: block
+      position: absolute
+      top: 10px
+      left: 10px
+
+.ic-menu_bars
+   width: 30px
+   height: 30px
+   margin: 0
+
+#check:checked ~ .sidebar
+   display: flex
+   margin-left: 0px
+
+   
+
+#check:checked ~ .burger_menu .ic-menu_bars
+   display: none
+
+   
