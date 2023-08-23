@@ -1,0 +1,54 @@
+
+.top_raw
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 25px 0
+    +smartphone
+        padding-top: 60px
+        z-index: 1
+
+.search_box
+    width: 100%
+    position: relative
+    padding-left: 33px
+    
+.search_box::after
+    content: ''
+    width: 27px
+    height: 27px
+    background: url(../images/top_raw/ic-search.svg) center/cover no-repeat
+    position: absolute
+    top: -3px
+    left: 0
+          
+.search_line
+    width: 100%
+    position: relative
+    outline: none
+    border: none
+    
+.search_line:enabled
+    background: none
+    
+.profiles_box
+    display: flex
+    gap: 10px
+    a
+        line-height: 0
+    a:nth-child(1)
+        position: relative
+    a:nth-child(1)::after
+        content: ''
+        width: 12px
+        height: 12px
+        background: #34B53A
+        position: absolute
+        border-radius: 50%
+        bottom: 0
+        right: 0
+    a:nth-child(4)
+        img
+            width: 44px
+            height: 44px
+        
