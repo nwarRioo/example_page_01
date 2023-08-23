@@ -267,4 +267,18 @@ body {
 .profiles_box a:nth-child(4) img {
   width: 44px;
   height: 44px;
+}
+
+.search_line::-webkit-search-cancel-button,
+.search_line ::-webkit-search-decoration,
+.search_line ::-webkit-search-results-button,
+.search_line ::-webkit-search-results-decoration {
+  display: none;
+}
+
+.search_line::-webkit-search-clear-button {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
+  display: none;
 }/*# sourceMappingURL=style.css.map */
