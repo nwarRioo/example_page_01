@@ -269,10 +269,7 @@ body {
   height: 44px;
 }
 
-.search_line::-webkit-search-cancel-button,
-.search_line ::-webkit-search-decoration,
-.search_line ::-webkit-search-results-button,
-.search_line ::-webkit-search-results-decoration {
+.search_line::-webkit-search-cancel-button, .search_line::-webkit-search-decoration, .search_line::-webkit-search-results-button, .search_line::-webkit-search-results-decoration {
   display: none;
 }
 
