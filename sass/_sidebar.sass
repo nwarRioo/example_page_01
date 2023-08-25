@@ -27,6 +27,13 @@
          display: flex
       &:hover
          background-color: $background_black
+      &::before
+         content: ""
+         width: 0
+         height: 0
+         border-style: solid
+         border-width: 8px 6px 8px 0
+         border-color: transparent white transparent transparent
    +smartphone
       margin-left: -260px
       width: 260px

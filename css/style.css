@@ -17,6 +17,7 @@ body {
 @media screen and (max-width: 900px) {
   .container {
     padding: 0 10px;
+    padding-left: 95px;
   }
 }
 @media screen and (max-width: 540px) {
@@ -62,6 +63,14 @@ body {
 }
 .sidebar__btn:hover {
   background-color: #000000;
+}
+.sidebar__btn::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 8px 6px 8px 0;
+  border-color: transparent white transparent transparent;
 }
 @media screen and (max-width: 540px) {
   .sidebar {
@@ -250,6 +259,8 @@ body {
 }
 .profiles_box a {
   line-height: 0;
+  width: 44px;
+  height: 44px;
 }
 .profiles_box a:nth-child(1) {
   position: relative;
@@ -264,9 +275,8 @@ body {
   bottom: 0;
   right: 0;
 }
-.profiles_box a:nth-child(4) img {
-  width: 44px;
-  height: 44px;
+.profiles_box img {
+  width: 100%;
 }
 
 .search_line::-webkit-search-cancel-button, .search_line::-webkit-search-decoration, .search_line::-webkit-search-results-button, .search_line::-webkit-search-results-decoration {
@@ -278,4 +288,69 @@ body {
   -webkit-appearance: none;
           appearance: none;
   display: none;
+}
+
+.main__left {
+  padding: 0 30px;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  width: 50%;
+}
+@media screen and (max-width: 540px) {
+  .main__left {
+    width: 100%;
+  }
+}
+
+.main__line {
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.main__line a {
+  width: 39%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #000000;
+  font-size: 14px;
+  font-weight: 400;
+}
+@media screen and (max-width: 540px) {
+  .main__line a {
+    width: 100%;
+  }
+}
+.main__line img {
+  width: 40px;
+  height: 40px;
+}
+.main__line:not(:last-child) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.main__datetime {
+  color: #000000;
+  opacity: 40%;
+  font-size: 14px;
+  font-weight: 400;
+}
+@media screen and (max-width: 540px) {
+  .main__datetime {
+    display: none;
+  }
+}
+
+.main__price {
+  text-align: right;
+  width: 95px;
+  font-size: 22px;
+  font-weight: 500;
+}
+@media screen and (max-width: 540px) {
+  .main__price {
+    font-size: 20px;
+  }
 }/*# sourceMappingURL=style.css.map */

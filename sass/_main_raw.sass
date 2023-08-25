@@ -1,0 +1,39 @@
+.main__left 
+    padding: 0 30px
+    background-color: $background_white
+    border-radius: 10px
+    width: 50%
+    +smartphone
+        width: 100%
+    
+.main__line 
+    padding: 20px 0
+    display: flex
+    align-items: center
+    justify-content: space-between
+    a
+        width: 39%
+        display: flex
+        align-items: center
+        gap: 10px
+        text-decoration: none
+        +text_person_name
+        +smartphone
+            width: 100%
+    img
+        width: 40px
+        height: 40px
+    &:not(:last-child)
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1)
+        
+.main__datetime
+    +text_person_name__forty_opacity
+    +smartphone
+        display: none
+
+.main__price
+    text-align: right
+    width: 95px
+    +text_price
+    +smartphone
+        font-size: 20px
